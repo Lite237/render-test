@@ -14,8 +14,7 @@ app.get("/", (req, res) => {
 });
 
 const BOT_TOKEN = process.env.bot;
-
-let chatId = "";
+console.log(BOT_TOKEN);
 
 const bot = new TelegramBot(BOT_TOKEN, {
     polling: true,
