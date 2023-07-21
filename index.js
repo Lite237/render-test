@@ -52,11 +52,6 @@ bot.on("video", async (msg) => {
     });
 });
 
-setInterval(async () => {
-    await fetch(process.env.URL);
-    bot.sendMessage(chatId, "Restarted");
-}, 1200000);
-
 app.listen(3000, () => {
     console.log("app listenting to port 3000");
 });
