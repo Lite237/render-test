@@ -10,11 +10,11 @@ app.use(express.static("./test"));
 app.use(express.static("./"));
 
 app.get("/", (req, res) => {
+    console.log(process.env.bot);
     res.send("Hello from express");
 });
 
 const BOT_TOKEN = process.env.bot;
-console.log(BOT_TOKEN);
 
 const bot = new TelegramBot(BOT_TOKEN, {
     polling: true,
